@@ -74,9 +74,7 @@ const seeds: SeedDocument[] = [
       current: 'v1-drift',
     },
     targetNodeVersion: '^20.0.0',
-    dependencies: [
-      { name: 'react', version: '19.0.0', deprecated: false },
-    ],
+    dependencies: [{ name: 'react', version: '19.0.0', deprecated: false }],
     status: 'DRIFT',
   },
 ]
@@ -94,9 +92,9 @@ async function seedDatabase() {
     console.log('\n✅ All seeds planted successfully!')
   } catch (error) {
     if (error instanceof Error) {
-      console.error('❌ Seeding failed:', error.message)
+      console.error('✗ Seeding failed:', error.message)
     } else {
-      console.error('❌ Seeding failed:', error)
+      console.error('✗ Seeding failed:', error)
     }
     process.exit(1)
   }
